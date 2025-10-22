@@ -3,7 +3,6 @@ package com.xxs.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 //部门实体类，存放部门表dept中的四个属性
@@ -13,6 +12,6 @@ import java.time.LocalDateTime;
 public class Dept {
     private Integer id;
     private String name;
-    private LocalDateTime createTime;
+    private LocalDateTime creatTime;
     private LocalDateTime updateTime;
 }

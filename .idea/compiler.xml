@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="D:/apache-maven-3.9.11/repository/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
-          <entry name="D:/apache-maven-3.9.11/repository/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
         </processorPath>
         <module name="Tlias-web-management" />
       </profile>
