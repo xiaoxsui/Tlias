@@ -1,0 +1,37 @@
+<configuration>
+    <!-- 属性定义 -->
+    <property name="LOG_HOME" value="C:/arsenal/study/java/Tlias/Log"/>
+
+    <!-- Appender 定义 -->
+    <!-- 控制台输出-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+<!-- 格式化输出：%d表示日期，%thread表示线程名，%-5level表示级别（从左显示5个字符宽度），%logger显示日志记录器的名称（最长36个字符），%msg表示输出的日志信息，%n表示换行 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 系统文件输出-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志文件输出的文件名,%i表示序号 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/tlias-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder class = "ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger 定义 -->
+    <logger name="com.example.service" level="DEBUG" additivity="false">
+        <appender-ref ref="file"/>
+    </logger>
+
+    <!-- Root Logger 定义 -->
+    <root level="info">
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+</configuration>
