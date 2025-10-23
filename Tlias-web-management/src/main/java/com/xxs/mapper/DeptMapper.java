@@ -19,10 +19,20 @@ public interface DeptMapper {
             @Result(column = "update_time", property = "updateTime")
     })
     //方式二：起别名
-//    @Select("select id, name, creat_time creatTime, update_time updateTime from dept order by update_time desc")
-    @Select("select id, name, creat_time, update_time from dept order by update_time desc")
+//    @Select("select id, name, create_time creatTime, update_time updateTime from dept order by update_time desc")
+    @Select("select id, name, create_time, update_time from dept order by update_time desc")
     List<Dept> findall();
 
+    //新增部门
+    @Insert("insert into dept(name, create_time, update_time) values(#{name},#{createTime},#{updateTime})")
+    void insert(Dept dept);
 
+    //根据ID查询部门数据
+    @Select("select id, name, create_time, update_time from dept where id = #{id}")
+    Dept getById(Integer id);
+
+    //根据ID修改部门名称
+    @Update("update dept set name = #{name}, update_time = #{updateTime} where id = #{id}")
+    void update(Dept dept);
 }
 

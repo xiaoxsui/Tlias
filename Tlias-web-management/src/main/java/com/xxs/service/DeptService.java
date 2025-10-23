@@ -9,4 +9,10 @@ public interface DeptService {
     void deleteById(Integer id);
 
     List<Dept> findall();
+
+    void add(Dept dept);
+
+    Dept getById(Integer id);
+
+    void update(Dept dept);
 }
