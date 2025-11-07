@@ -14,7 +14,6 @@
     <!-- 系统文件输出-->
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 日志文件输出的文件名,%i表示序号 -->
-<!--        <file>${LOG_HOME}/tlias-%d{yyyy-MM-dd}-%i.log</file>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${LOG_HOME}/tlias-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
             <maxHistory>30</maxHistory>
@@ -31,7 +30,7 @@
     </logger>
 
     <!-- Root Logger 定义 -->
-    <root level="DEBUG">
+    <root level="info">
         <appender-ref ref="console"/>
         <appender-ref ref="file"/>
     </root>
