@@ -1,0 +1,16 @@
+00:00:19.865 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 494560 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+00:00:19.866 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+00:00:20.395 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+00:00:20.398 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:00:20.418 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+00:00:20.872 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+00:00:20.881 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+00:00:20.882 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+00:00:20.883 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+00:00:20.923 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+00:00:20.924 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1020 ms
+00:00:21.689 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+00:00:21.701 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+00:00:21.707 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 2.19 seconds (process running for 3.327)
+00:01:23.107 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+00:01:23.216 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
