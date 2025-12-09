@@ -3,7 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xxs.mapper.EmpMapper">
-<!--    resultType:查询返回的单条记录所封装的类型-->
+    <delete id="deleteByIds">
+        <!--批量删除员工基本信息-->
+        delete from emp where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <!--resultType:查询返回的单条记录所封装的类型-->
     <select id="list" resultType="com.xxs.pojo.Emp">
         select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id
         <where>

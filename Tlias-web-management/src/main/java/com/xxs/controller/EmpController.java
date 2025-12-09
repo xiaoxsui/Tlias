@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.List;
 
 //员工管理Controller
 @Slf4j
@@ -47,6 +49,22 @@ public class EmpController {
     public Result save(@RequestBody Emp emp){
         log.info("新增员工：{}",emp);
         empService.save(emp);
+        return Result.success();
+    }
+
+    //删除员工 -- 数组实现
+/*    @DeleteMapping
+    public Result delete(Integer[] ids){
+        log.info("删除员工：{}", Arrays.toString(ids));  //需要使用Arrays工具类输出数组元素
+
+        return Result.success();
+    }*/
+
+    //删除员工 -- list实现（推荐使用，方便操作list元素）
+    @DeleteMapping
+    public Result delete(@RequestParam List<Integer> ids){
+        log.info("删除员工：{}", ids);
+        empService.delete(ids);
         return Result.success();
     }
 }

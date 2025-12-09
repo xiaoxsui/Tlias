@@ -6,6 +6,7 @@ import com.xxs.pojo.PageResult;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public interface EmpService {
     //分页查询
@@ -16,4 +17,7 @@ public interface EmpService {
 
     //新增员工
     void save(Emp emp);
+
+    //批量删除员工信息
+    void delete(List<Integer> ids);
 }
