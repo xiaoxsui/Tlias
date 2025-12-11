@@ -15,6 +15,7 @@ import java.util.List;
 @Mapper
 public interface EmpMapper {
 
+
     /*    ————————————————原始分页查询实现方式——————————————————*/
 /*    //查询总记录数
     @Select("select count(*) from emp left join dept on emp.dept_id = dept.id")
@@ -39,4 +40,7 @@ public interface EmpMapper {
     void insert(Emp emp);
 
     void deleteByIds(List<Integer> ids);
+
+    //根据id查询员工信息以及工作经历信息
+    Emp getById(Integer id);
 }
