@@ -75,4 +75,12 @@ public class EmpController {
         Emp emp = empService.getInfo(id);
         return Result.success(emp);
     }
+
+    //修改员工
+    @PutMapping
+    public Result update(@RequestBody Emp emp){     //封装json格式的数据，需要使用@RequestBody注解
+        log.info("修改员工");
+        empService.update(emp);
+        return Result.success();
+    }
 }

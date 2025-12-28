@@ -2,6 +2,7 @@ package com.xxs.service;
 
 import com.xxs.pojo.Emp;
 import com.xxs.pojo.EmpQueryParam;
+import com.xxs.pojo.LoginInfo;
 import com.xxs.pojo.PageResult;
 
 import java.time.LocalDate;
@@ -23,4 +24,9 @@ public interface EmpService {
 
     //根据id查询员工信息
     Emp getInfo(Integer id);
+
+    void update(Emp emp);
+
+    //员工登录
+    LoginInfo login(Emp emp);
 }

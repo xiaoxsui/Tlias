@@ -2,14 +2,13 @@ package com.xxs.mapper;
 
 import com.xxs.pojo.Emp;
 import com.xxs.pojo.EmpQueryParam;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 //操作员工基本信息
 @Mapper
@@ -43,4 +42,18 @@ public interface EmpMapper {
 
     //根据id查询员工信息以及工作经历信息
     Emp getById(Integer id);
+
+    //根据id更新员工的基本信息
+    void updateById(Emp emp);
+
+    //统计员工人数
+    @MapKey("pos")  //不需要声明，只解决mybatisX插件的误报错误
+    List<Map<String, Object>> countEmpJobData();
+
+    @MapKey("name")
+    List<Map<String, Object>> countEmpGenderData();
+
+    //根据用户名和密码查询员工信息
+    @Select("select id, username, name from emp where username=#{username} and password=#{password}")
+    Emp selectByUsernameAndPassword(Emp emp);
 }

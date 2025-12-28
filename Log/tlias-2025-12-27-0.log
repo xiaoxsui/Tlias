@@ -1,0 +1,91 @@
+23:33:01.205 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 898820 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+23:33:01.206 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+23:33:01.771 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+23:33:01.773 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:33:01.799 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+23:33:02.275 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+23:33:02.287 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:33:02.289 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:33:02.289 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+23:33:02.338 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:33:02.338 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1102 ms
+23:33:03.167 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:33:03.181 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+23:33:03.188 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 2.322 seconds (process running for 2.916)
+23:34:32.683 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:34:32.683 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:34:32.685 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+23:34:32.764 [http-nio-8080-exec-1] INFO  com.xxs.controller.LoginController - 登录：Emp(id=null, username=songjiang, password=123456, name=null, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:34:32.787 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:34:33.143 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@518da765
+23:34:33.144 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:34:52.810 [http-nio-8080-exec-3] INFO  com.xxs.controller.LoginController - 登录：Emp(id=null, username=wusong, password=123456, name=null, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:34:52.814 [http-nio-8080-exec-3] INFO  com.xxs.service.impl.EmpServiceImpl - 员工登录成功：Emp(id=9, username=wusong, password=null, name=武松, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:35:12.522 [http-nio-8080-exec-4] INFO  com.xxs.controller.LoginController - 登录：Emp(id=null, username=wusong, password=123456, name=null, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:35:12.527 [http-nio-8080-exec-4] INFO  com.xxs.service.impl.EmpServiceImpl - 员工登录成功：Emp(id=9, username=wusong, password=null, name=武松, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:35:40.015 [http-nio-8080-exec-5] INFO  com.xxs.controller.LoginController - 登录：Emp(id=null, username=wusong, password=123456, name=null, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:35:40.017 [http-nio-8080-exec-5] INFO  com.xxs.service.impl.EmpServiceImpl - 员工登录成功：Emp(id=9, username=wusong, password=null, name=武松, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+23:54:59.206 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+23:54:59.289 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+23:54:59.308 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+23:54:59.313 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+23:55:02.483 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 906132 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+23:55:02.486 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+23:55:02.937 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+23:55:02.939 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:55:02.959 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+23:55:03.359 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+23:55:03.369 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:55:03.370 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:55:03.371 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+23:55:03.415 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:55:03.415 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 904 ms
+23:55:03.449 [main] INFO  com.xxs.filter.DemoFilter - 初始化过滤器...
+23:55:04.156 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:55:04.172 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+23:55:04.179 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 1.985 seconds (process running for 2.545)
+23:55:09.355 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:55:09.355 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:55:09.355 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+23:56:30.386 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+23:56:30.455 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+23:56:30.468 [SpringApplicationShutdownHook] INFO  com.xxs.filter.DemoFilter - 销毁过滤器...
+23:56:32.979 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 905564 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+23:56:32.982 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+23:56:33.353 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+23:56:33.355 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:56:33.367 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+23:56:33.665 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+23:56:33.671 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:56:33.672 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:56:33.672 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+23:56:33.702 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:56:33.702 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 696 ms
+23:56:33.725 [main] INFO  com.xxs.filter.DemoFilter - 初始化过滤器...
+23:56:33.725 [main] INFO  com.xxs.filter.DemoFilter - 初始化过滤器...
+23:56:34.255 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:56:34.268 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+23:56:34.274 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 1.529 seconds (process running for 1.961)
+23:56:42.568 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:56:42.568 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:56:42.570 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+23:59:44.580 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+23:59:44.656 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+23:59:44.667 [SpringApplicationShutdownHook] INFO  com.xxs.filter.DemoFilter - 销毁过滤器...
+23:59:44.668 [SpringApplicationShutdownHook] INFO  com.xxs.filter.DemoFilter - 销毁过滤器...
+23:59:47.265 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 883000 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+23:59:47.267 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+23:59:47.635 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+23:59:47.636 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:59:47.648 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+23:59:47.961 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+23:59:47.968 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:59:47.969 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:59:47.969 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+23:59:47.998 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:59:47.998 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 707 ms
+23:59:48.023 [main] INFO  com.xxs.filter.DemoFilter - 初始化过滤器...
+23:59:48.023 [main] INFO  com.xxs.filter.DemoFilter - 初始化过滤器...
+23:59:48.613 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:59:48.626 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+23:59:48.632 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 1.605 seconds (process running for 2.039)

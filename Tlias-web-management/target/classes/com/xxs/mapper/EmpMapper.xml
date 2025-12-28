@@ -3,6 +3,48 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xxs.mapper.EmpMapper">
+    <!--根据ID更新员工基本信息-->
+    <!--set标签：会自动生成set关键字；会自动删除更新字段后多余的,-->
+    <!--if标签：使用if标签生成动态sql，来动态数量的修改属性-->
+    <update id="updateById">
+        UPDATE emp
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="job != null">
+                job = #{job},
+            </if>
+            <if test="salary != null">
+                salary = #{salary},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+            <if test="entryDate != null">
+                entry_date = #{entryDate},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId},
+            </if>
+            <!-- 更新时间自动设置为当前时间 -->
+            update_time = #{updateTime}
+        </set>
+        WHERE id = #{id}
+    </update>
+
     <delete id="deleteByIds">
         <!--批量删除员工基本信息-->
         delete from emp where id in
@@ -10,6 +52,7 @@
             #{id}
         </foreach>
     </delete>
+
     <!--resultType:查询返回的单条记录所封装的类型-->
     <select id="list" resultType="com.xxs.pojo.Emp">
         select e.*, d.name deptName from emp e left join dept d on e.dept_id = d.id
@@ -25,13 +68,13 @@
             and e.entry_date between #{begin} and #{end}
           </if>
         </where>
-        order by e.update_time
+        order by e.update_time desc
     </select>
 
 <!--    根据id查询员工信息以及工作经历信息-->
     <select id="getById" resultMap="empResultMap">
         select e.*,
-               ee.id ee_id,
+               ee.id ee_id,     <!--为方便重名属性的封装，需在这里给予别名-->
                ee.emp_id ee_empid,
                ee.begin ee_begin,
                ee.end ee_end,
@@ -41,7 +84,26 @@
         where e.id = #{id};
     </select>
 
-<!--    定义resultMap-->
+   <!-- 统计员工人数-->
+    <select id="countEmpJobData" resultType="java.util.Map">
+        SELECT
+            COALESCE(jm.job_name, '其他') AS pos,
+            COUNT(*) AS num
+        FROM emp e
+                 LEFT JOIN job_mapping jm ON e.job = jm.job_id
+        GROUP BY COALESCE(jm.job_name, '其他')
+        ORDER BY num;
+    </select>
+
+    <!--统计员工性别人数-->
+    <select id="countEmpGenderData" resultType="java.util.Map">
+        SELECT
+            if(gender = 1,'男性员工','女性员工') name,
+            count(*) value
+        from emp group by gender
+    </select>
+
+    <!--    定义resultMap-->
     <resultMap id="empResultMap" type="com.xxs.pojo.Emp">
         <id column="id" property="id"/>     <!--主键id标签使用id字段进行封装-->
         <result column="username" property="username"/> <!--普通属性使用result标签封装-->

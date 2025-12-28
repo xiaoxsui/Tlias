@@ -1,0 +1,122 @@
+14:15:55.626 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 105444 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+14:15:55.628 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+14:15:56.396 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+14:15:56.399 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:15:56.430 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+14:15:57.120 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:15:57.135 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:15:57.136 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:15:57.137 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+14:15:57.197 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:15:57.198 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1526 ms
+14:15:58.385 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:15:58.404 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+14:15:58.415 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.273 seconds (process running for 4.205)
+14:16:56.980 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:16:56.981 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:16:56.982 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:16:57.048 [http-nio-8080-exec-1] INFO  com.xxs.controller.UploadController - 文件上传：2.gif
+14:16:57.058 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.xxs.utils.AliyunOSSProperties.getEndpoint()" because "this.aliyunOSSProperties" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.xxs.utils.AliyunOSSProperties.getEndpoint()" because "this.aliyunOSSProperties" is null
+	at com.xxs.utils.AliyunOSSOperator.upload(AliyunOSSOperator.java:29)
+	at com.xxs.controller.UploadController.upload(UploadController.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+14:24:38.014 [main] INFO  c.xxs.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 17.0.12 with PID 54980 (C:\arsenal\study\java\Tlias\Tlias-web-management\target\classes started by xiaoxiaosui in C:\arsenal\study\java\Tlias)
+14:24:38.016 [main] INFO  c.xxs.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+14:24:38.649 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+14:24:38.652 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:24:38.675 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+14:24:39.226 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:24:39.238 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:24:39.240 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:24:39.240 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+14:24:39.292 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:24:39.292 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1238 ms
+14:24:40.262 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:24:40.279 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+14:24:40.289 [main] INFO  c.xxs.TliasWebManagementApplication - Started TliasWebManagementApplication in 2.7 seconds (process running for 3.494)
+14:24:48.417 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:24:48.417 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:24:48.418 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:24:48.474 [http-nio-8080-exec-1] INFO  com.xxs.controller.UploadController - 文件上传：2.gif
+14:24:49.278 [http-nio-8080-exec-1] INFO  com.xxs.controller.UploadController - 文件上传OSS，url：https://xiaoxiaosui.oss-cn-beijing.aliyuncs.com/2025/12/3c09eafc-d474-4ba3-9d22-9dfe17bca36e.gif
+14:26:42.679 [http-nio-8080-exec-1] INFO  com.xxs.controller.DeptController - 查询全部的部门数据
+14:26:42.705 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:26:42.932 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5092bf3d
+14:26:42.935 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:26:43.574 [http-nio-8080-exec-6] INFO  com.xxs.controller.DeptController - 查询全部的部门数据
+14:26:43.585 [http-nio-8080-exec-5] INFO  com.xxs.controller.EmpController - 分页查询：EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+14:27:03.733 [http-nio-8080-exec-2] INFO  com.xxs.controller.UploadController - 文件上传：1.jpg
+14:27:04.111 [http-nio-8080-exec-2] INFO  com.xxs.controller.UploadController - 文件上传OSS，url：https://xiaoxiaosui.oss-cn-beijing.aliyuncs.com/2025/12/a74adbaf-7362-4137-a950-ce485512e671.jpg
+14:27:25.138 [http-nio-8080-exec-10] INFO  com.xxs.controller.EmpController - 新增员工：Emp(id=null, username=zhagnsan, password=null, name=张三, gender=1, phone=18915067092, job=null, salary=null, image=https://xiaoxiaosui.oss-cn-beijing.aliyuncs.com/2025/12/a74adbaf-7362-4137-a950-ce485512e671.jpg, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=[EmpExpr(id=null, empId=null, begin=2025-12-18, end=2026-01-02, company=123, job=321)])
+14:27:25.155 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.xxs.service.impl.EmpServiceImpl.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+14:27:25.156 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@505011788 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d] for JDBC transaction
+14:27:25.158 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@505011788 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d] to manual commit
+14:27:25.213 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+14:27:25.215 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@505011788 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d]
+14:27:25.222 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@505011788 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d] after transaction
+14:27:25.239 [http-nio-8080-exec-1] INFO  com.xxs.controller.EmpController - 分页查询：EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+14:27:27.216 [http-nio-8080-exec-6] INFO  com.xxs.controller.EmpController - 分页查询：EmpQueryParam(page=4, pageSize=10, name=, gender=null, begin=null, end=null)
+14:28:29.926 [http-nio-8080-exec-5] INFO  com.xxs.controller.UploadController - 文件上传：1.jpg
+14:28:30.203 [http-nio-8080-exec-5] INFO  com.xxs.controller.UploadController - 文件上传OSS，url：https://xiaoxiaosui.oss-cn-beijing.aliyuncs.com/2025/12/d7deb7f2-06a5-42e2-82f4-9b72bef901d6.jpg
+14:28:38.804 [http-nio-8080-exec-3] INFO  com.xxs.controller.EmpController - 新增员工：Emp(id=null, username=123, password=null, name=321, gender=1, phone=12312312331, job=null, salary=null, image=https://xiaoxiaosui.oss-cn-beijing.aliyuncs.com/2025/12/d7deb7f2-06a5-42e2-82f4-9b72bef901d6.jpg, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=[EmpExpr(id=null, empId=null, begin=2025-12-20, end=2026-01-20, company=331, job=213)])
+14:28:38.805 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.xxs.service.impl.EmpServiceImpl.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+14:28:38.805 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@884164725 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d] for JDBC transaction
+14:28:38.805 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@884164725 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d] to manual commit
+14:28:38.814 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+14:28:38.814 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@884164725 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d]
+14:28:38.828 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@884164725 wrapping com.mysql.cj.jdbc.ConnectionImpl@5092bf3d] after transaction
+14:28:38.842 [http-nio-8080-exec-4] INFO  com.xxs.controller.EmpController - 分页查询：EmpQueryParam(page=4, pageSize=10, name=, gender=null, begin=null, end=null)
+14:48:57.841 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+14:48:57.957 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+14:48:57.984 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:48:57.990 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
